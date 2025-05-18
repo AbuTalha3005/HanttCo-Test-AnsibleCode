@@ -20,4 +20,9 @@ This project provisions:
 - SSH
 
 ## 📐 Architecture
+
 ![Untitled Diagram drawio](https://github.com/user-attachments/assets/d6a34ba8-3882-4047-b9ac-d3805684143c)
+
+## **Screenshots Of The Results Showing Browser HTTPS Requests Connected Successfully To Nginx Server**
+
+![Nginx-Configured-Successfully-Screenshot](https://github.com/user-attachments/assets/c4b7c85f-a5f1-4cdf-80f9-7fe03ef7d977)
