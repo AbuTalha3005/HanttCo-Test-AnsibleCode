@@ -1,0 +1,5 @@
+nginx_ssl_dir: /etc/nginx/ssl
+ssl_cert_path: /etc/nginx/ssl/nginx.crt
+ssl_key_path: /etc/nginx/ssl/nginx.key
+ssl_subj: "/C=SG/ST=Singapore/L=Singapore/O=hanttCo/CN=hanttco.local"
+ssl_days_valid: 365

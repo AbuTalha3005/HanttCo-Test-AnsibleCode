@@ -1,0 +1,6 @@
+---
+- name: Setup NGINX with HTTPS on Target EC2
+  hosts: target
+  become: true
+  roles:
+    - nginx

@@ -1,0 +1,45 @@
+---
+- name: Install nginx and openssl
+  dnf:
+    name:
+      - nginx
+      - openssl
+    state: present
+
+- name: Enable and start NGINX
+  systemd:
+    name: nginx
+    enabled: yes
+    state: started
+
+- name: Create SSL directory
+  file:
+    path: "{{ nginx_ssl_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Generate self-signed certificate
+  command: >
+    openssl req -x509 -nodes -days {{ ssl_days_valid }} -newkey rsa:2048
+    -keyout {{ ssl_key_path }} -out {{ ssl_cert_path }}
+    -subj "{{ ssl_subj }}"
+  args:
+    creates: "{{ ssl_cert_path }}"
+
+- name: Deploy HTTPS NGINX config
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/conf.d/default.conf
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Test NGINX config
+  command: nginx -t
+  register: nginx_test
+  failed_when: "'successful' not in nginx_test.stderr"
+
+- name: Reload NGINX
+  systemd:
+    name: nginx
+    state: reloaded
