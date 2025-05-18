@@ -19,10 +19,14 @@ This project provisions:
 - NGINX
 - SSH
 
+## Ansible Code Directory Structure
+
+![Ansible-Code-Directory-Structure](https://github.com/user-attachments/assets/f03e79a4-a849-4562-b06a-1f5390aca471)
+
 ## 📐 Architecture
 
 ![Untitled Diagram drawio](https://github.com/user-attachments/assets/d6a34ba8-3882-4047-b9ac-d3805684143c)
 
-## **Screenshots Of The Results Showing Browser HTTPS Requests Connected Successfully To Nginx Server**
+## Screenshots Of The Results Showing Browser HTTPS Requests Connected Successfully To Nginx Server
 
 ![Nginx-Configured-Successfully-Screenshot](https://github.com/user-attachments/assets/c4b7c85f-a5f1-4cdf-80f9-7fe03ef7d977)
