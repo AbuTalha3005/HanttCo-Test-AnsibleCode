@@ -1,4 +1,4 @@
-# HanttCo-Test-AnsibleCode
+# HanttCo AWS Linux EC2 Ansible Nginx Deployment
 A secure, automated setup using **Ansible** to install and configure **NGINX with HTTPS** on an Amazon Linux EC2 instance.
 
 ## Author -- **AbuTalha**
